@@ -52,11 +52,11 @@ client.on(Events.PresenceUpdate, (oldPresence, newPresence) => {
 	};
 
 // test for 2nd level bot
-	for (let i = 0; i < UserBotList.length+1; i++) {
+	for (let j = 0; j < UserBotList.length+1; j++) {
 //		console.log(i)                  //debug command
-		if (ID === list[i]) {
+		if (ID === UserBotList[j]) {
 //			console.log('Detect');      // debug command
-			var PresChange = client.users.cache.get(list[i]).tag;
+			var PresChange = client.users.cache.get(UserBotList[i]).tag;
 			var PresBefore = oldPresence? oldPresence.status : 'no data';
 			var PresAfter = newPresence? newPresence.status : 'no data';
 			var FinalPres = PresChange + " have switch from " + PresBefore + " to " + PresAfter;
